@@ -17,8 +17,10 @@ import Paper from "@mui/material/Paper";
 
 import ItemCenter from "../../ItemMain/ItemCenter/indexItem.tsx";
 import User from "./Css/user.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Main: React.FC = () => {
+  const navigate = useNavigate();
   const cld = new Cloudinary({ cloud: { cloudName: "dokp7ig0u" } });
   const img = cld
     .image("department/u5a8t0ssbu3qqu7bp0yf")
@@ -92,6 +94,9 @@ const Main: React.FC = () => {
             />
             <Badge badgeContent={count} color="warning">
               <ShoppingBagTwoToneIcon
+                onClick={() => {
+                  navigate("/cart");
+                }}
                 style={{ fontSize: "40px" }}
                 className="cur"
               />
