@@ -1,0 +1,15 @@
+.containerMain{
+    display: flex;
+    justify-content: center;
+}
+.bar-main{
+    background-image: linear-gradient(to right, rgba(255,255,255), rgba(90, 226, 197, 0.993), rgb(4, 245, 205));
+}
+
+.main-center{
+    background-color: rgba(176, 247, 200, 0.247);
+}
+
+.cur{
+    cursor: pointer;
+}
