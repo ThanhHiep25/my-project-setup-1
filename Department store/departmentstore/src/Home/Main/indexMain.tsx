@@ -1,23 +1,22 @@
-import "./Css/main.css";
+import './Css/main.css';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { AdvancedImage } from "@cloudinary/react";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { auto } from "@cloudinary/url-gen/actions/resize";
-import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
-import StorefrontTwoToneIcon from "@mui/icons-material/StorefrontTwoTone";
-import { Badge } from "@mui/material";
+import { AdvancedImage } from '@cloudinary/react';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBagTwoToneIcon from '@mui/icons-material/ShoppingBagTwoTone';
+import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
+import { Badge } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import InputBase from '@mui/material/InputBase';
+import Paper from '@mui/material/Paper';
 
-import IconButton from "@mui/material/IconButton";
-import InputBase from "@mui/material/InputBase";
-import Paper from "@mui/material/Paper";
-
-import ItemCenter from "../../ItemMain/ItemCenter/indexItem.tsx";
-import User from "./Css/user.tsx";
-import { useNavigate } from "react-router-dom";
+import ItemCenter from '../../ItemMain/ItemCenter/indexItem.tsx';
+import User from './Css/user.tsx';
 
 const Main: React.FC = () => {
   const navigate = useNavigate();
@@ -91,6 +90,9 @@ const Main: React.FC = () => {
             <StorefrontTwoToneIcon
               style={{ fontSize: "40px" }}
               className="cur"
+              onClick={() => {
+                navigate("/store");
+              }}
             />
             <Badge badgeContent={count} color="warning">
               <ShoppingBagTwoToneIcon

@@ -1,28 +1,42 @@
-import { Button, IconButton } from "@mui/material";
-import React from "react";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import './Css/itemcart.css';
+
+import React from 'react';
+
+import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import RemoveIcon from '@mui/icons-material/Remove';
+import { Button, IconButton } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
 
 function CartItem() {
   const [count, setCount] = React.useState<number>(0);
   return (
-    <div>
+    <div  style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+    }}>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
+          width: 800,
+
         }}
+
+        className="div-container-item-hover"
       >
         <img
           src="https://res.cloudinary.com/dokp7ig0u/image/upload/v1717591652/department/nikeBlackWhite.png"
-          height={100}
-          width={100}
+          height={80}
+          width={80}
           alt="Nike"
-          className="modal-img-item"
+          style={{
+            borderRadius:"10px"
+          }}
         />
 
         <div>
@@ -30,10 +44,12 @@ function CartItem() {
           <p className="p-CartItem">Loại : 49 Đen</p>
         </div>
 
-        <div style={{
+        <div
+          style={{
             textAlign: "center",
-        }}>
-          <p className="p-CartItem">Giá: 300 $</p>
+          }}
+        >
+          <p className="p-CartItem">Giá: 300.000 VND</p>
 
           <div
             style={{
@@ -45,10 +61,10 @@ function CartItem() {
             }}
           >
             <IconButton>
-                 <FavoriteBorderIcon/>
+              <FavoriteBorderIcon />
             </IconButton>
             <IconButton>
-                 <DeleteOutlineIcon/>
+              <DeleteOutlineIcon />
             </IconButton>
           </div>
         </div>
@@ -77,7 +93,9 @@ function CartItem() {
             <AddIcon />
           </Button>
         </div>
+        
       </div>
+      <Checkbox sx={{ '& .MuiSvgIcon-root': { fontSize: 38 } }}/>
     </div>
   );
 }

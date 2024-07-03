@@ -1,0 +1,21 @@
+.drawer-container {
+  width: 400px;
+  background-color: #d8efd3;
+  height: 100vh;
+  max-height: 100%;
+}
+
+.input-search-store{
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 320px;
+  font-size: 16px;
+}
+
+.search-group{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

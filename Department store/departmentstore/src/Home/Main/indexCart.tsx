@@ -12,6 +12,7 @@ import { auto } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 import { Cloudinary } from "@cloudinary/url-gen/index";
 import CartItem from "./indexCartItem.tsx";
+import User from "./Css/user.tsx";
 function Cart() {
   const [value, setValue] = React.useState("1");
   const cld = new Cloudinary({ cloud: { cloudName: "dokp7ig0u" } });
@@ -34,18 +35,36 @@ function Cart() {
           height: "100px",
           border: "none",
           display: "flex",
+          justifyContent:"space-between",
           marginLeft: "10px",
+          cursor: "pointer",
         }}
         className="bar-main"
       >
         <div
           style={{
             display: "flex",
+            
+          }}
+          onClick={() => {
+            window.location.href = "/main";
           }}
         >
-          <AdvancedImage cldImg={img} />
+          <AdvancedImage cldImg={img}/>
           <h1>Gaju</h1>
         </div>
+        <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
+              width: "200px",
+            }}
+          >
+           
+            <User />
+          </div>
       </header>
       <Box sx={{ width: "100%" }}>
         <TabContext value={value}>
