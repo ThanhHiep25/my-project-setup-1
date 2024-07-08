@@ -255,6 +255,7 @@ const ItemCenter: React.FC<ItemCenterProps> = ({ onCountChange }) => {
           </Box>
         </Fade>
       </Modal>
+
     </div>
   );
 };

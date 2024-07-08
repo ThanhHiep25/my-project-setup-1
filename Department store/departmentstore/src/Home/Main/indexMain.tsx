@@ -1,22 +1,24 @@
-import './Css/main.css';
+import "./Css/main.css";
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { AdvancedImage } from '@cloudinary/react';
-import { Cloudinary } from '@cloudinary/url-gen';
-import { auto } from '@cloudinary/url-gen/actions/resize';
-import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagTwoToneIcon from '@mui/icons-material/ShoppingBagTwoTone';
-import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
-import { Badge } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
-import Paper from '@mui/material/Paper';
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { auto } from "@cloudinary/url-gen/actions/resize";
+import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
+import SearchIcon from "@mui/icons-material/Search";
+import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
+import StorefrontTwoToneIcon from "@mui/icons-material/StorefrontTwoTone";
+import { Badge } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import Paper from "@mui/material/Paper";
 
-import ItemCenter from '../../ItemMain/ItemCenter/indexItem.tsx';
-import User from './Css/user.tsx';
+import ItemCenter from "../../ItemMain/ItemCenter/indexItem.tsx";
+import User from "./Css/user.tsx";
+import GroupItem from "../../ItemMain/ItemCenter/groupItem.tsx";
+import IndexFooter from "./indexFooter.tsx";
 
 const Main: React.FC = () => {
   const navigate = useNavigate();
@@ -111,6 +113,11 @@ const Main: React.FC = () => {
       <div style={{}} className="main-center">
         <ItemCenter onCountChange={setCount} />
       </div>
+
+      <div>
+        <GroupItem />
+      </div>
+      <IndexFooter />
     </div>
   );
 };
