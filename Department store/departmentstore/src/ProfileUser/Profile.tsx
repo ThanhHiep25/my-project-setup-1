@@ -15,6 +15,7 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import EditIcon from "@mui/icons-material/Edit";
 import Inventory2TwoToneIcon from "@mui/icons-material/Inventory2TwoTone";
 import AccessTimeTwoToneIcon from "@mui/icons-material/AccessTimeTwoTone";
+import IndexFooter from "../Home/Main/indexFooter.tsx";
 
 function Profile() {
   const actions = [
@@ -101,6 +102,7 @@ function Profile() {
           <Divider />
         </div>
       </div>
+      <IndexFooter/>
     </div>
   );
 }

@@ -6,7 +6,4 @@ app.use(cors());
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-
-
-
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));

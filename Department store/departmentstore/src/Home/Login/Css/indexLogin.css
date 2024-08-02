@@ -8,17 +8,41 @@
   height: 100vh;
   background-size: 100% 100%;
   max-height: 100%;
+  position: relative; /* Đảm bảo rằng overlay và content có thể nằm trên background */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu sắc sẽ được thay đổi bằng JS */
+  transition: background-color 0.5s; /* Chuyển đổi mượt mà */
+}
+
+.content {
+  position: relative; /* Đảm bảo rằng nội dung nằm trên overlay */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .row {
-  background-color: rgba(206, 206, 206, 0.555);
+  backdrop-filter: blur(10px);
   height: 600px;
   width: 500px;
   margin: 30px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  
 }
 
-
+.title-login {
+  font-size: 30px;
+  background: linear-gradient(to right, rgb(255, 115, 0), blue);
+  background-clip: text;
+  color: transparent;
+  margin-left: 10px;
+}

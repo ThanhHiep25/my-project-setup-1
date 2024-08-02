@@ -1,0 +1,38 @@
+.container-group {
+  margin: 50px;
+}
+
+.card-re {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  padding: 10px;
+}
+
+.card-re-1 {
+  margin-left: 20px;
+}
+
+.btn-group-sale-cont {
+  border: none;
+  background-color: #ffff;
+}
+.btn-group-sale-cont:hover {
+  cursor: pointer;
+  color: rgb(97, 198, 245);
+}
+
+.img-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.title-sale {
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(rgb(255, 115, 0), rgb(50, 50, 172));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

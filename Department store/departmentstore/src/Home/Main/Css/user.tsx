@@ -24,6 +24,15 @@ function User() {
   };
 
   const navigate = useNavigate();
+
+  const signOut = () => {
+    const confirmSignOut = window.confirm("Bạn có chắc chắn muốn đăng xuất?");
+    if (confirmSignOut) {
+      localStorage.removeItem("accessToken");
+      window.location.href = "/";
+    }
+  };
+
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
@@ -98,7 +107,7 @@ function User() {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={signOut}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
