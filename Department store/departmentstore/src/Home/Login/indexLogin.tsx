@@ -9,6 +9,8 @@ import InputLabel from "@mui/material/InputLabel";
 import { Button, FilledInput, IconButton, InputAdornment } from "@mui/material";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import { useNavigate } from "react-router-dom";
+import NightsStayIcon from "@mui/icons-material/NightsStay";
+import HotelIcon from '@mui/icons-material/Hotel';
 
 function Login() {
   const navigate = useNavigate();
@@ -26,9 +28,31 @@ function Login() {
     } else if (hour >= 12 && hour < 18) {
       return "Chào buổi chiều!";
     } else if (hour >= 18 && hour < 22) {
-      return "Chào buổi tối!";
+      return (
+        <div>
+          <span>Chào buổi tối</span>
+          <NightsStayIcon
+            fontSize="large"
+            color="info"
+            style={{
+              marginLeft: "20px",
+            }}
+          />
+        </div>
+      );
     } else {
-      return "Khuya rồi ngủ đi nào!";
+      return (
+        <div>
+          <span>Khuya rồi!</span>
+          <HotelIcon
+            fontSize="large"
+            color="primary"
+            style={{
+              marginLeft: "20px",
+            }}
+          />
+        </div>
+      );
     }
   };
 
