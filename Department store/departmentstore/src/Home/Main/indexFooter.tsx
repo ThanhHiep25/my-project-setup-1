@@ -56,11 +56,6 @@ function IndexFooter() {
             <InstagramIcon fontSize="large" color="secondary" />
           </IconButton>
         </div>
-        <p style={{ color: "white" }}>Help & Support</p>
-        {/* Add help & support links */}
-        <a href="#">Return Policy</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contact Us</a>
       </footer>
     </div>
   );
