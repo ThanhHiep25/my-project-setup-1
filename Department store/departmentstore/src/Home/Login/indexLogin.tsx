@@ -11,6 +11,8 @@ import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import { useNavigate } from "react-router-dom";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import HotelIcon from '@mui/icons-material/Hotel';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 
 function Login() {
   const navigate = useNavigate();
@@ -24,9 +26,31 @@ function Login() {
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour >= 6 && hour < 12) {
-      return "Chào buổi sáng!";
+      return (
+        <div>
+          <span>Chào buổi sáng</span>
+          <WbSunnyIcon
+            fontSize="large"
+            color="primary"
+            style={{
+              marginLeft: "20px",
+            }}
+          />
+        </div>
+      );
     } else if (hour >= 12 && hour < 18) {
-      return "Chào buổi chiều!";
+      return (
+        <div>
+          <span>Chào buổi chiều</span>
+          <WbTwilightIcon
+            fontSize="large"
+            color="primary"
+            style={{
+              marginLeft: "20px",
+            }}
+          />
+        </div>
+      );
     } else if (hour >= 18 && hour < 22) {
       return (
         <div>
@@ -69,7 +93,7 @@ function Login() {
 
   // Thay nền ảnh (chèn opacity) theo thời gian
   const getOverLayColor = () => {
-    const hour = new Date().getUTCHours();
+    const hour = new Date().getHours();
     const maxOpacity = 0.8;
     const minOpacity = 0.2;
     const opacity = ((maxOpacity - minOpacity) * hour) / 24 + minOpacity;
@@ -77,7 +101,7 @@ function Login() {
   };
   // Thay màu text dễ nhìn khi nền tối
   const getTextColor = () => {
-    const hour = new Date().getUTCHours();
+    const hour = new Date().getHours();
     const maxBrightness = 50;
     const minBrightness = 255;
     const brightness = Math.round(
