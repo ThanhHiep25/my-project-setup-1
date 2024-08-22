@@ -16,11 +16,12 @@
 .btn-group-sale-cont {
   border: none;
   background-color: #ffff;
+  &:hover{
+    cursor: pointer;
+    color: rgb(97, 198, 245);
+  }
 }
-.btn-group-sale-cont:hover {
-  cursor: pointer;
-  color: rgb(97, 198, 245);
-}
+
 
 .img-pic {
   border-radius: 20px;

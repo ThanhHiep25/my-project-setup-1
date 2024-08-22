@@ -10,9 +10,9 @@ import { Button, FilledInput, IconButton, InputAdornment } from "@mui/material";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import { useNavigate } from "react-router-dom";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
-import HotelIcon from '@mui/icons-material/Hotel';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import WbTwilightIcon from '@mui/icons-material/WbTwilight';
+import HotelIcon from "@mui/icons-material/Hotel";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import WbTwilightIcon from "@mui/icons-material/WbTwilight";
 
 function Login() {
   const navigate = useNavigate();
@@ -156,17 +156,36 @@ function Login() {
               }
             />
           </FormControl>
-          <Button
-            variant="contained"
+          <div
             style={{
               marginTop: "50px",
-            }}
-            onClick={() => {
-              navigate("/main");
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              width: "205px"
             }}
           >
-            <FingerprintIcon /> Đăng nhập
-          </Button>
+            <Button
+              variant="contained"
+              onClick={() => {
+                navigate("/main");
+              }}
+            >
+              <FingerprintIcon /> Đăng nhập
+            </Button>
+
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "#f44336",
+                color: "white",
+                fontWeight: "bold",
+                marginTop: "20px",
+              }}
+            >
+              Đăng ký
+            </Button>
+          </div>
         </div>
       </div>
     </div>
